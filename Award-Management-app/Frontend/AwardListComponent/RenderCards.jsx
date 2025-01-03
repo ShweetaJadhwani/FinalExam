@@ -4,9 +4,7 @@ const RenderCards = () => {
   return (
     <div>
       
-  const {state, setState } = useState({
-  
-  });
+ 
       
     </div>
   )

@@ -21,3 +21,7 @@ store.dispatch(function (dispatch) {
     dispatch({ type: 'Awards_Progress' })
   }, 1000)
 })
+store.dispatch({ type: 'SHOW_Awards', text: 'These are the awards.' })
+setTimeout(() => {
+  store.dispatch({ type: 'HIDE_Awards' })
+}, 5000)
