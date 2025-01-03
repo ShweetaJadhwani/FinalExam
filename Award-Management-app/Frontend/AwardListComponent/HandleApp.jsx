@@ -1,20 +1,25 @@
 import React from 'react'
-import { createStore} from 'redux'
+import { useReducer } from 'react'
 
-const HandleApp = () => {
-  return (
+const  HandleApp = () => {
+    const [events, dispatch] = useReducer(
+        (state, action) => { switch (action.type) {
+            case "fetchAwards":
+                state = [ ...state, action.data];
+               return state;
+  
+              case "AwardsDescription":
+                state = [ ...state, action.data];
+               return state;
+  
+                case "AwardCards":
+                    return state.filter((_, idx) => idx !== action.idx);
 
-    <div>
-        const reducer = new reducer;
-        const store = createStore(
-            reducer,
-        )
-    const [action, dispatch] = (State, initialValue){
-        
+              default:
+                  console.log(state);
+                return state;
+          }
+        },
+    [])
     }
-        useReducer,
-    </div>
-  )
-}
-
 export default HandleApp
