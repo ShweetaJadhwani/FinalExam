@@ -2,6 +2,7 @@ import React from "react";
 
 const Handleform = () => {
   return (
+    <div class="Container">
     <div>
       <input
         type="Text"
@@ -25,6 +26,8 @@ const Handleform = () => {
       <button class="Clear" onClick={clear}>Clear</button>
       <button class="Reset" onClick={Reset}>Reset</button>
     </div>
+    </div>
+    
   );
 };
 
